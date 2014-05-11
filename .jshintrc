@@ -22,6 +22,7 @@
 	"predef": [
 		"inject",
 		"describe",
+		"localforage",
 		"it",
 		"beforeEach",
 		"afterEach",
