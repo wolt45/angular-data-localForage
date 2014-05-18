@@ -46,6 +46,13 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		copy: {
+			dist: {
+				files: {
+					'dist/angular-data-localForage.js': ['src/angular-data-localForage.js']
+				}
+			}
+		},
 		karma: {
 			options: {
 				configFile: './karma.conf.js'
@@ -94,7 +101,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('build', [
 		'clean',
 		'jshint',
-		'browserify',
+		'copy',
 		'version:dist/angular-data-localForage.js',
 		'uglify:main'
 	]);

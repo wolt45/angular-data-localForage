@@ -1,5 +1,5 @@
 // Setup global test variables
-var $rootScope, $q, $log, DSProvider, DS, app, $httpBackend, p1, p2, p3, p4, p5;
+var $rootScope, $q, $log, DSProvider, DS, DSUtils, DSLocalForageAdapter, p1, p2, p3, p4, p5;
 
 // Helper globals
 var fail = function (msg) {
@@ -32,12 +32,13 @@ beforeEach(function (done) {
 	module('app', function (_DSProvider_) {
 		DSProvider = _DSProvider_;
 	});
-	inject(function (_$rootScope_, _$q_, _$httpBackend_, _DS_, _$log_) {
+	inject(function (_$rootScope_, _$q_, _DS_, _$log_, _DSUtils_, _DSLocalForageAdapter_) {
 		// Setup global mocks
 		$q = _$q_;
 		$rootScope = _$rootScope_;
 		DS = _DS_;
-		$httpBackend = _$httpBackend_;
+		DSLocalForageAdapter = _DSLocalForageAdapter_;
+		DSUtils = _DSUtils_;
 		DS.defineResource({
 			name: 'post',
 			endpoint: '/posts'
@@ -56,7 +57,5 @@ beforeEach(function (done) {
 
 // Clean up after each test
 afterEach(function () {
-	$httpBackend.verifyNoOutstandingExpectation();
-	$httpBackend.verifyNoOutstandingRequest();
 	$log.reset();
 });

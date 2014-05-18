@@ -1,7 +1,7 @@
 /**
  * @author Jason Dobry <jason.dobry@gmail.com>
  * @file angular-data-localForage.js
- * @version <%= pkg.version %> - Homepage <https://github.com/jmdobry/angular-data-localForage/>
+ * @version 0.1.0 - Homepage <https://github.com/jmdobry/angular-data-localForage/>
  * @copyright (c) 2014 Jason Dobry <https://github.com/jmdobry/>
  * @license MIT <https://github.com/jmdobry/angular-data-localForage/blob/master/LICENSE>
  *
@@ -143,27 +143,22 @@
 				return localforage.removeItem(key, successCallback);
 			}
 
-			function find(resourceConfig, id, options) {
-				options = options || {};
+			function find(resourceConfig, id) {
 				return GET(
-					DSUtils.makePath(options.baseUrl || resourceConfig.baseUrl, resourceConfig.endpoint, id)
+					DSUtils.makePath(resourceConfig.baseUrl, resourceConfig.endpoint, id)
 				);
 			}
 
-			function update(resourceConfig, id, attrs, options) {
-				options = options || {};
+			function update(resourceConfig, id, attrs) {
 				return PUT(
-					DSUtils.makePath(options.baseUrl || resourceConfig.baseUrl, resourceConfig.endpoint, id),
+					DSUtils.makePath(resourceConfig.baseUrl, resourceConfig.endpoint, id),
 					attrs
-				).then(function () {
-						return GET(DSUtils.makePath(options.baseUrl || resourceConfig.baseUrl, resourceConfig.endpoint, id));
-					});
+				);
 			}
 
-			function destroy(resourceConfig, id, options) {
-				options = options || {};
+			function destroy(resourceConfig, id) {
 				return DEL(
-					DSUtils.makePath(options.baseUrl || resourceConfig.baseUrl, resourceConfig.endpoint, id)
+					DSUtils.makePath(resourceConfig.baseUrl, resourceConfig.endpoint, id)
 				);
 			}
 		}];

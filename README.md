@@ -2,7 +2,7 @@
 
 __localForage adapter for angular-data.__
 
-__Current version:__ 0.0.1
+__Current version:__ 0.1.0
 
 Adapter usage documentation can be found [here](http://angular-data.codetrain.io).
 

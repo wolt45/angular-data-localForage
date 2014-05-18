@@ -23,8 +23,9 @@ module.exports = function (config) {
 			'bower_components/angular-mocks/angular-mocks.js',
 			'bower_components/angular-data/dist/angular-data.js',
 			'bower_components/angular-cache/dist/angular-cache.js',
-			'dist/angular-data-localForage.js',
-			'test/integration/**/*.js',
+			'bower_components/localforage/dist/localforage.js',
+			'src/angular-data-localForage.js',
+			'test/**/*.js',
 			'karma.start.js'
 		],
 
