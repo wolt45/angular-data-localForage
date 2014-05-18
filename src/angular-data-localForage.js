@@ -1,11 +1,11 @@
 /**
  * @author Jason Dobry <jason.dobry@gmail.com>
- * @file angular-data-localForage.js
+ * @file angular-data-localforage.js
  * @version <%= pkg.version %> - Homepage <https://github.com/jmdobry/angular-data-localForage/>
  * @copyright (c) 2014 Jason Dobry <https://github.com/jmdobry/>
  * @license MIT <https://github.com/jmdobry/angular-data-localForage/blob/master/LICENSE>
  *
- * @overview localForage adapter for angular-data.
+ * @overview localforage adapter for angular-data.
  */
 (function (window, angular, localforage, undefined) {
 	'use strict';

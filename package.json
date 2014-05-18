@@ -1,5 +1,5 @@
 {
-  "name": "angular-data-localForage",
+  "name": "angular-data-localforage",
   "description": "localForage adapter for angular-data.",
   "version": "0.1.0",
   "homepage": "https://github.com/jmdobry/angular-data-localForage",
